@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>{#category.categoryName}<span id="gallery-item-name"></span></h1>
+<div id="gallery-cat">
+    <div id="gallery-cat-left">
+        <ul id="gallery-thumbs" class="clearfix">
+            {#count|set value="1"}
+            {loop items="#category.items" value="item"}
+            {if #count == 3}
+            {#class|set value=" class='gallery-thumb-last'"}
+            {#count|set value="0"}
+            {/if}
+            <li{#class} rel="galitem-{#item.id}">
+            <a href="{#item.primaryImages.large.srcValue}" rel="shadowbox">
+                {#item.primaryImages.small.tag}
+            </a>
+            </li>
+            {#count|increment value="1"}
+            {/loop}
+        </ul>
+        {if #category.subCategories}
+        {loop items="#category.subCategories" value="subCategory"}
+        {if #subCategory.itemCount > 0}
+        <a href="{#subCategory.url}" id="gallery-archive-link">{#subCategory.name}</a>
+        {/if}
+        {/loop}
+        {/if}
+    </div>
+</div>
+
+</body>
+</html>

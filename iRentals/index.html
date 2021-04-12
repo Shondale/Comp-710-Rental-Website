@@ -14,11 +14,60 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- fevicon -->
     <link rel="icon" href="images/ncat logo.png" type="image/gif" />
+
+    <style>
+        .column {
+            float: left;
+            width: 32.1%;
+            margin-bottom: 10px;
+            padding: 0 8px;
+        }
+        .menu_iconb {
+            size: 12px;
+        }
+
+        .card {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            margin: 4px;
+        }
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .container {
+            padding: 0 8px;
+        }
+        .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .btn {
+            width: 5%;
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+            background-color: RoyalBlue;
+        }
+
+
+    </style>
 </head>
 <!-- body -->
 
@@ -44,25 +93,25 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-9">
-                                    <div class="right_header_info">
-                                        <ul>
+                                    <div class="right_header_info" style="alignment: center">
+                                        <ul style="alignment: right">
                                             <li class="menu_iconb">
-                                                <a href="#">Log in <img style="margin-right: 15px;" src="icon/login.png" alt="#" /> </a>
+                                                <input></input>
                                             </li>
                                             <li class="menu_iconb">
-                                                <a href="#">Sign up<img style="margin-left: 15px;" src="icon/signup.png" alt="#" /></a>
+                                                <a href="#">Search<img width="3%" src="icon/serch.png" alt="#" /></a>
                                             </li>
                                             <li class="menu_iconb">
-                                                <a href="#">Cart<img style="margin-right: 15px;" src="icon/cart.png" alt="#" /></a>
+                                                <a href="#">Log in <img  width="3%"  src="icon/log.png" alt="#" /> </a>
                                             </li>
                                             <li class="menu_iconb">
-                                                <a href="#">Search<img style="margin-right: 15px;" src="icon/search.png" alt="#" /></a>
+                                                <a href="#">Sign up<img width="3%" src="icon/sin.png" alt="#" /></a>
                                             </li>
-
+                                            <li class="menu_iconb">
+                                                <a href="#">Cart<img  width="4%"  src="icon/cart.png" alt="#" /></a>
+                                            </li>
                                             <li>
-                                                <button type="button" id="sidebarCollapse">
-                                                    <img src="images/menu_icon.png" alt="#" />
-                                                </button>
+                                                <a href="#">Menu<img  width="3%" src="icon/menu.png" alt="#" /></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -139,20 +188,19 @@
     <!--  footer -->
     <footer>
         <div class="footer">
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer_top">
                             <div class="row">
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                    <a href="index.html"> <img class="logo1" src="images/logo1.png" /></a>
-                                </div>
+
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                     <ul class="sociel">
-                                        <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
-                                        <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li> <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                                        <li> <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li> <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                        <li> <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -162,21 +210,6 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 ">
-                                <div class="address">
-                                    <h3>Contact us </h3>
-                                    <ul class="loca">
-                                        <li>
-                                            <a href="#"><img src="icon/loc.png" alt="#" /></a>Greensboro, NC</li>
-                                        <li>
-                                            <a href="#"><img src="icon/call.png" alt="#" /></a>+1112223333</li>
-                                        <li>
-                                            <a href="#"><img src="icon/email.png" alt="#" /></a>fake@gmail.com</li>
-
-                                    </ul>
-
-                                </div>
-                            </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="address">
                                     <h3>Account</h3>
@@ -193,9 +226,53 @@
                     </div>
                 </div>
             </div>
-           
-          </div>
         </div>
+        <div id="about" class="about-section">
+            <h1 style="text-align: center" >About Us</h1>
+            <p></p>
+
+        </div >
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="Addison.jpeg" alt="Louis" style="width:10%" height="70%">
+                    <div class="container">
+                        <h2>Addison Shaver</h2>
+                        <p class="title">Team Leader and Backend Developer</p>
+                        <p>Leads the team according to the project requirement.</p>
+                        <p>********@aggies.ncat.edu</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="Developer/sandeep.jpg" alt="Sandeep" style="width:100%">
+                    <div class="container">
+                        <h2>Sandeep Shah</h2>
+                        <p class="title">FrontEnd Developer</p>
+                        <p>Creates a user friendly User interface.</p>
+                        <p>sshah@aggies.ncat.edu</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="shon.jpeg" alt="oliver" width="47%">
+                    <div class="container">
+                        <h2>Sholdale Rodhes</h2>
+                        <p class="title">Frontend Developer</p>
+                        <p></p>
+                        <p>******@aggies.ncat.edu</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </footer>
     <!-- end footer -->

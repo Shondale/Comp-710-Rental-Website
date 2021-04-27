@@ -5,17 +5,26 @@ from django.http import HttpResponse
 
 def hello(request, name):
 	#return render(request, "hello.html", {"name": name})
-
 	return HttpResponse("<b>Hello " + name + "</b>")
 
 def index(request):
-	return render(request, "index.html")
-'''
-def saveToDb(request, name):
-	Name.objects.create(name=name)
-	count = Name.objects.count()
-	return HttpResponse("<h2>You have inserted a name successfully</h2> <br> count = " + str(count))
-'''
+	return render(request, "template/index.html")
 
 def index(request):
-	return HttpResponse("<h2>You have reached the homepage</h2>")
+	#return HttpResponse("<h2>You have reached the homepage</h2>")
+	return render(request, "iRentals/index.html", {})
+
+def appliances(request):
+	pass
+
+def electronics(request):
+	pass
+
+def furniture(request):
+	pass
+
+def tools(request):
+	pass
+
+def login(request):
+	pass

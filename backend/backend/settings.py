@@ -25,13 +25,13 @@ SECRET_KEY = 'django-insecure-!ym$+1fmecpy1ls^$y5mf6w91!rgnokwyyf$@@zn@b!x59z8u#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-3-129-63-154.us-east-2.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-3-129-63-154.us-east-2.compute.amazonaws.com', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'backend.apps.BackendConfig', 
+    'backend.apps.BackendConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
